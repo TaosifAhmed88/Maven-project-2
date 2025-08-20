@@ -39,7 +39,7 @@ jobs:
           echo "Deploying $WAR_FILE to Tomcat..."
           curl -v -u $TOMCAT_USER:$TOMCAT_PASS \
             --upload-file "$WAR_FILE" \
-            "http://${TOMCAT_HOST}:${TOMCAT_PORT}/manager/text/deploy?path=/test&update=true"
+            "http://${TOMCAT_HOST}:${TOMCAT_PORT}/manager/text/deploy?update=true"
         env:
           TOMCAT_USER: ${{ secrets.TOMCAT_USER }}
           TOMCAT_PASS: ${{ secrets.TOMCAT_PASS }}
