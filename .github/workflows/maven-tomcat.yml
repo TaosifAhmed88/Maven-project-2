@@ -34,4 +34,4 @@ jobs:
 
           curl -v -u $TOMCAT_USER:$TOMCAT_PASSWORD \
             --upload-file "$WAR_FILE" \
-            "http://54.224.160.205:8081/manager/text/deploy?path=/$APP_NAME&update=true"
+            "http://13.220.192.1:8081/manager/text/deploy?path=/$APP_NAME&update=true"
